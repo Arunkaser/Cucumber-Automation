@@ -10,8 +10,9 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		plugin = {"html:target/cucumberHtmlReport"},
 		//pretty:target/cucumber-json-report.json
-		features = "classpath:features",
-		glue = {"info.seleniumcucumber.stepdefinitions"}
+		features = "src/test/resources/features/",
+		glue = {"src/test/java/stepDefintions/"},
+		tags={"@Login"}
 )
 
 public class Runner {
