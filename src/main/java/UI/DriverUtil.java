@@ -2,6 +2,7 @@ package UI;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
@@ -23,6 +24,7 @@ public class DriverUtil {
         if (browser.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", property + driverConf.getProperty("CHROME_DRIVERPATH"));
             System.out.println("driver path --> "+property+driverConf.getProperty("CHROME_DRIVERPATH"));
+            ChromeOptions chromeoptions = new ChromeOptions();
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", property + driverConf.getProperty("FIREFOX_DRIVERPATH"));

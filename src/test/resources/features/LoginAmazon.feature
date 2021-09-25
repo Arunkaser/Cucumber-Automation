@@ -1,9 +1,9 @@
-Feature: Login Amazon
-  As a user, I should be able to login to Amazon App
+Feature: Google Search
+  As a user, I should be able to verify the first result on google
 
 Scenario: Access Amazon
 
-  Given User Launch "Chrome" browser
-  And User browse amazon url
-  When User login into to Amazon with valid Credentials
-  Then User verify the title of the homepage
+  Given User Launch browser
+  When User browse "walmart" on google
+  Then User verify the first link
+  Then User click on first link and verify the title

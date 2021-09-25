@@ -12,7 +12,9 @@ import cucumber.api.junit.Cucumber;
 		//pretty:target/cucumber-json-report.json
 		features = "src/test/resources/features/",
 		glue = {"src/test/java/stepDefintions/"},
-		tags={"@Login"}
+		tags={"@Login"},
+		dryRun = false
+
 )
 
 public class Runner {
